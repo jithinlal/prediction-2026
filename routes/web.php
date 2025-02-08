@@ -16,9 +16,6 @@ Route::get('/', function () {
 	]);
 });
 
-Route::get('/phpinfo', function () {
-	return phpinfo();
-});
 
 Route::get('/dashboard', function () {
 	return Inertia::render('Dashboard');
