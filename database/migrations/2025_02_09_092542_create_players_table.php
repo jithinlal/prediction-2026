@@ -15,8 +15,8 @@ return new class extends Migration {
 			$table->string('name')->unique();
 			$table->foreignId('team_id')->constrained('teams')->cascadeOnDelete();
 			$table->string('image');
-			$table->boolean('is_star_player')->default(false);
-			$table->enum('position', ['GK', 'DEF', 'MID', 'ATT']);
+			$table->boolean('is_star')->default(false);
+			$table->enum('position', ['GK', 'DEF', 'MID', 'FWD']);
 			$table->integer('goals')->default(0);
 			$table->integer('assists')->default(0);
 			$table->boolean('is_injured')->default(false);
