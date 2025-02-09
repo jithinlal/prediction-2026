@@ -12,7 +12,7 @@ return new class extends Migration {
 	{
 		Schema::create('players', function (Blueprint $table) {
 			$table->id();
-			$table->string('name')->unique();
+			$table->string('name');
 			$table->foreignId('team_id')->constrained('teams')->cascadeOnDelete();
 			$table->string('image');
 			$table->boolean('is_star')->default(false);

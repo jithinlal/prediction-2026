@@ -15,6 +15,7 @@ return new class extends Migration {
 			$table->foreignId('home_team_id')->constrained('teams')->cascadeOnDelete();
 			$table->foreignId('away_team_id')->constrained('teams')->cascadeOnDelete();
 			$table->foreignId('group_id')->nullable()->constrained('groups')->cascadeOnDelete();
+			$table->enum('game_type', ['GROUP', 'ROUND OF 32', 'ROUND OF 16', 'QUARTER FINAL', 'SEMI FINAL', 'LOOSERS FINAL', 'FINAL']);
 			$table->dateTime('date');
 			$table->string('stadium');
 			$table->integer('home_goals')->default(0);
